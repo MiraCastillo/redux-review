@@ -1,26 +1,22 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
 
 
 class C2 extends Component{
-    constructor(){
-        super();
-        this.state={
-
-        }
-    }
-
     render(){
         return(
             <div>
             <div>Component 2</div>
-            <input />
+            <input placeholder={this.props.userInput}/>
             </div>
         )
     }
 }
 
-function mapStateToProps(){
-    
+function mapStateToProps(state){
+    return{
+        userInput: state.userInput
+    }
 }
 
-export default C2;
+export default connect(mapStateToProps) (C2);

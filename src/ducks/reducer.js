@@ -1,22 +1,23 @@
 var initialState={
-    userInput:""
+    userInput: "nothing yet"
 }
 
 const ADD_INPUT = "ADD_INPUT";
 
 
-export function reducer(state = initialState, action){
+export default function reducer(state = initialState, action){
     switch(action.type){
         case ADD_INPUT:
-            return Object.assign({}, state, {userInput:action.payload})
+            return Object.assign({}, state, {userInput:action.payload});
+        default:
+            return state;
     }
 }
 
 
 export function addInput(input){
-    console.log(input)
     return{
         type: ADD_INPUT,
-        action: input
+        payload: input
     }
 }
