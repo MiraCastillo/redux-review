@@ -1,3 +1,9 @@
+We set up redux with the store. We made it so that when you type into the first input box, it saves to state, and then when you press the button, it updates redux with what is now on state. In the second component, the placeholder for the input box is the userInput on redux. So when we type the words "captain america" into the first input box, and click the button, the second input box will say "captain america"
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
